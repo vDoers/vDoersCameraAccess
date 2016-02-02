@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
+# Visual Studio 2012
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vDoersCameraAccess.Droid", "vDoersCameraAccess\vDoersCameraAccess.Droid\vDoersCameraAccess.Droid.csproj", "{A506222D-2F8D-49DF-A9D6-8239BAC34C44}"
@@ -10,11 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vDoersCameraAccess.iOS", "vDoersCameraAccess\vDoersCameraAccess.iOS\vDoersCameraAccess.iOS.csproj", "{A5373947-3DD2-42DF-B616-D4889CCD1260}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		vDoersCameraAccess\vDoersCameraAccess\vDoersCameraAccess.projitems*{a506222d-2f8d-49df-a9d6-8239bac34c44}*SharedItemsImports = 4
-		vDoersCameraAccess\vDoersCameraAccess\vDoersCameraAccess.projitems*{a5373947-3dd2-42df-b616-d4889ccd1260}*SharedItemsImports = 4
-		vDoersCameraAccess\vDoersCameraAccess\vDoersCameraAccess.projitems*{13d20027-bad9-4d8e-86ce-ca726c760173}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -76,7 +71,8 @@ Global
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.AppStore|iPhone.Build.0 = AppStore|iPhone
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Debug|iPhone.Build.0 = Debug|iPhone
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -86,6 +82,11 @@ Global
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Release|iPhone.Build.0 = Release|iPhone
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{A5373947-3DD2-42DF-B616-D4889CCD1260}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		vDoersCameraAccess\vDoersCameraAccess\vDoersCameraAccess.projitems*{a506222d-2f8d-49df-a9d6-8239bac34c44}*SharedItemsImports = 4
+		vDoersCameraAccess\vDoersCameraAccess\vDoersCameraAccess.projitems*{a5373947-3dd2-42df-b616-d4889ccd1260}*SharedItemsImports = 4
+		vDoersCameraAccess\vDoersCameraAccess\vDoersCameraAccess.projitems*{13d20027-bad9-4d8e-86ce-ca726c760173}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

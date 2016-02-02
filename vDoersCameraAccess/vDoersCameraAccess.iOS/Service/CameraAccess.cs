@@ -4,7 +4,10 @@ using System.Text;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Media;
+using vDoersCameraAccess;
+using System.Threading.Tasks;
 
+[assembly: Xamarin.Forms.Dependency(typeof(CameraAccess))]
 namespace vDoersCameraAccess
 {
     public class CameraAccess : ICameraAccess
@@ -16,10 +19,10 @@ namespace vDoersCameraAccess
             if (fromCamera)
             {
                 controller = picker.GetTakePhotoUI(new StoreCameraMediaOptions
-                {
-                    Name = string.Format("vDoers_{0}.jpg", DateTime.Now.Ticks),
-                    Directory = "vDoersCamera"
-                });
+                    {
+                        Name = string.Format("vDoers_{0}.jpg", DateTime.Now.Ticks),
+                        Directory = "vDoersCamera"
+                    });
             }
             else
             {
@@ -28,20 +31,23 @@ namespace vDoersCameraAccess
 
             var window = UIApplication.SharedApplication.KeyWindow;
             var vc = window.RootViewController;
-            if (vc.PresentedViewController != null)
+            if (vc != null)
             {
-                vc = vc.PresentedViewController;
+                // vc = vc.PresentedViewController;
                 vc.PresentViewController(controller, true, null);
             }
             controller.GetResultAsync().ContinueWith(t =>
-            {
-                // Dismiss the UI yourself
-                controller.DismissViewController(true, () =>
                 {
-                    MediaFile file = t.Result;
-                });
+                    // Dismiss the UI yourself
+                    controller.DismissViewController(true, () =>
+                        {
+                            if (imageData != null)
+                            {
+                                imageData(t.Result);
+                            }
+                        });
 
-            });
+                }, TaskScheduler.FromCurrentSynchronizationContext());
         }
     }
 }
