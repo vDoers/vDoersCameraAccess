@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#3f4c57"
+             x:Class="vDoersCameraAccess.Pages.CameraAccessPage">
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <StackLayout>
+      <Image Source="{Binding SelectedImage}">
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding TakePictureCommand}" />
+        </Image.GestureRecognizers>
+      </Image>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>
