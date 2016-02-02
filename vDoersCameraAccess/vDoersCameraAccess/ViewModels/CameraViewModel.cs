@@ -10,6 +10,21 @@ namespace vDoersCameraAccess
 {
     public class CameraViewModel : BaseViewModel
     {
+        #region Private
+
+        Page page;
+
+        #endregion
+
+        #region Constructor
+
+        public CameraViewModel(Page _page)
+        {
+            page = _page;
+        }
+
+        #endregion
+
         #region Properties
 
         private ImageSource _selectedImage = "bgback.png";
@@ -29,9 +44,12 @@ namespace vDoersCameraAccess
         {
             get
             {
-                return new Command(() =>
+                return new Command(async () =>
                {
-                   AddPicture();
+                   var action = await page.DisplayActionSheet("Select Media", "Nahh", null, MediaSource.Camera.ToString(), MediaSource.Gallery.ToString());
+                   if (action == "Nahh")
+                       return;
+                   AddPicture(action == MediaSource.Camera.ToString() ? true : false);
                });
             }
         }
@@ -40,12 +58,12 @@ namespace vDoersCameraAccess
 
         #region Click Picture
 
-        void AddPicture()
+        void AddPicture(bool fromCamera)
         {
             try
             {
                 var camera = Xamarin.Forms.DependencyService.Get<ICameraAccess>();
-                camera.GetImageAsync(OnImageTaken);
+                camera.GetImageAsync(OnImageTaken, fromCamera);
             }
             catch (Exception ex)
             {

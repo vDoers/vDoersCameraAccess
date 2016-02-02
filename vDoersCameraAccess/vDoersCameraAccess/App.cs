@@ -12,7 +12,7 @@ namespace vDoersCameraAccess
         public App()
         {
             // The root page of your application
-            MainPage = new Pages.CameraAccessPage();
+            MainPage = new NavigationPage(new Pages.CameraAccessPage());
         }
 
 		protected override void OnStart ()

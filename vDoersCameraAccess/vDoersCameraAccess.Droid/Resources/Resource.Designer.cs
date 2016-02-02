@@ -50,12 +50,31 @@ namespace vDoersCameraAccess.Droid
 			// aapt resource value: 0x7f020001
 			public const int Icon = 2130837505;
 			
+			// aapt resource value: 0x7f020002
+			public const int splash = 2130837506;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int Theme_Splash = 2130903040;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

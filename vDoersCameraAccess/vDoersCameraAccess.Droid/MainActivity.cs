@@ -10,7 +10,7 @@ using Android.Content;
 
 namespace vDoersCameraAccess.Droid
 {
-	[Activity (Label = "vDoersCameraAccess", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "vDoers Camera", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
         public Action<int, Result, Intent> OnActvitiResultCallback { get; set; }

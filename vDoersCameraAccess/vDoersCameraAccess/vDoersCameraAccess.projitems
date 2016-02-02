@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interface\ICameraAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\MediaSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CameraAccessPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

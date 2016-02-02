@@ -13,7 +13,7 @@ namespace vDoersCameraAccess.Pages
 		public CameraAccessPage ()
 		{
 			InitializeComponent ();
-            BindingContext = new CameraViewModel();
+            BindingContext = new CameraViewModel(this);
 		}
 	}
 }
