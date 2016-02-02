@@ -12,7 +12,7 @@ namespace vDoersCameraAccess
         public App()
         {
             // The root page of your application
-            MainPage = new NavigationPage(new Pages.CameraAccessPage());
+            MainPage = new NavigationPage(new Pages.CameraAccessPage()) { BarBackgroundColor = Color.FromHex("#3f4952") };
         }
 
 		protected override void OnStart ()
