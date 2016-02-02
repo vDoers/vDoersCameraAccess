@@ -35,7 +35,7 @@ Take Pic Command
             }
         }
 
- 		    void AddPicture(bool fromCamera)
+	void AddPicture(bool fromCamera)
         {
             try
             {
@@ -48,7 +48,7 @@ Take Pic Command
             }
         }
 
-		    private void OnImageTaken(MediaFile obj)
+	private void OnImageTaken(MediaFile obj)
         {
             if (obj != null)
                 SelectedImage = obj.Path;
