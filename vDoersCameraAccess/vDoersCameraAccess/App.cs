@@ -22,7 +22,7 @@ namespace vDoersCameraAccess
 
 		protected override void OnSleep ()
 		{
-			// Handle when your app sleeps
+			//Merge This Commit
 		}
 
 		protected override void OnResume ()
