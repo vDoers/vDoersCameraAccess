@@ -17,7 +17,7 @@ namespace vDoersCameraAccess
 
 		protected override void OnStart ()
 		{
-            //This is for Cherry Pick
+            //This is for Conflict
 		}
 
 		protected override void OnSleep ()
