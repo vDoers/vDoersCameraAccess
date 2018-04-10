@@ -17,7 +17,7 @@ namespace vDoersCameraAccess
 
 		protected override void OnStart ()
 		{
-            //This is for Conflict
+            //This is for Sure Nothing
 		}
 
 		protected override void OnSleep ()
