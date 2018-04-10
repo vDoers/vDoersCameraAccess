@@ -17,12 +17,12 @@ namespace vDoersCameraAccess
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
+            //This is for Sure Nothing
 		}
 
 		protected override void OnSleep ()
 		{
-			// Handle when your app sleeps
+			//Merge This Commit
 		}
 
 		protected override void OnResume ()
