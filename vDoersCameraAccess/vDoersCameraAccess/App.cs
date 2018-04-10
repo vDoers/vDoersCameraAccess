@@ -17,7 +17,7 @@ namespace vDoersCameraAccess
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
+            //This is for Cherry Pick
 		}
 
 		protected override void OnSleep ()
